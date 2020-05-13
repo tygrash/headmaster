@@ -1,0 +1,19 @@
+plugins {
+    id 'scala'
+}
+
+apply plugin: 'application'
+mainClassName = "Main"
+
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.1';
+    compile group: 'org.zalando', name: 'spark-json-schema_2.11', version: '0.6.1';
+    compile group: 'org.apache.spark', name: 'spark-sql_2.11', version: '2.4.5';
+    compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-scala_2.11', version: '2.11.0';
+}
